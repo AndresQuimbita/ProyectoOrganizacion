@@ -1,13 +1,63 @@
-## Welcome to GitHub Pages
+## Tiempo de Ejecución
+El proyecto se centra en comparar los tiempos que le toman a diferentes lenguages de programación, tanto de alto como de bajo nivel, para ordenar algunos arreglos de diferentes tamaños usando el algoritmo del insertion sort.
 
-You can use the [editor on GitHub](https://github.com/AndresQuimbita/ProyectoOrganizacion/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Experimentación
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+A continuación se presenta los códigos usados en los diferentes lenguages para usar el insertion sort.
+## Java
+```markdown
+import java.util.List;
+import java.util.stream.Collectors;
+import java.lang.StringBuilder;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
-### Markdown
+public class InsertionSort {
+    public static void main(String[] args) throws IOException {
+        List<Integer> array = Files.lines(Paths.get("./logs/array.txt"))
+            .map(line -> Integer.valueOf(line))
+            .collect(Collectors.toCollection(ArrayList::new));
+        long time = sort(array);
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+        FileWriter fileWriter = new FileWriter(new File("./logs/java_sorted.txt"));
+        BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+        for (Integer i : array) {
+            bufferedWriter.write(i.toString());
+            bufferedWriter.newLine();
+        }
+        bufferedWriter.close();
 
+        BufferedWriter resultsWriter = new BufferedWriter(new FileWriter(
+                    "results.md", true));
+        resultsWriter.write(new StringBuilder().append("Java     | ")
+                .append(Long.toString(time)).toString());
+        resultsWriter.newLine();
+        resultsWriter.close();
+    }
+
+    public static long sort(List<Integer> array) {
+        long start = System.currentTimeMillis();
+        int key;
+        int j;
+        int n = array.size();
+        for (int i = 1; i < n; ++i) {
+            key = array.get(i);
+            j = i - 1;
+            while (j >= 0 && array.get(j) > key) {
+                array.set(j + 1, array.get(j));
+                j--;
+            }
+            array.set(j + 1, key);
+        }
+        return System.currentTimeMillis() - start;
+    }
+}
+```
 ```markdown
 Syntax highlighted code block
 
