@@ -216,6 +216,6 @@ python3 InsertionSort.py
     <img src="Tiempo.png">
 </p>
 
-![Results:](results.md)
+[Resultados de la ejecución de los algoritmos:](results.md)
 ### Discusión
 
