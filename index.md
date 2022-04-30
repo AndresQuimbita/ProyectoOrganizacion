@@ -4,8 +4,8 @@ El proyecto se centra en comparar los tiempos que le toman a diferentes lenguage
 ### Experimentación
 En esta se presentan los diferentes códigos ejecutados para el análisis de los datos de tiempo de ejecución.
 ### Características Maquina Virtual
->Ram -> 0.5 GB
->CPU -> 2.5GHz
+-Ram -> 0.5 GB
+-CPU -> 2.5GHz
 ## Generar Arreglos
 RandomArrayWriter para crear los arreglos con diferentes tamaños y notar cambios en los tiempos de ejecución en cada uno de los lenguajes.
 ```markdown
