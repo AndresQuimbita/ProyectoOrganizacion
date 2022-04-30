@@ -174,6 +174,7 @@ int main(int argc, char** argv) {
 ```
 
 <p align="center">
+    <img src="Tiempo.png">
    ![Tiempo de ejecución de ordenar diferentes arreglos.](Tiempo.png)****
 </p>
 
