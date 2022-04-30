@@ -3,6 +3,11 @@ El proyecto se centra en comparar los tiempos que le toman a diferentes lenguage
 
 ### Experimentación
 En esta se presentan los diferentes códigos ejecutados para el análisis de los datos de tiempo de ejecución.
+### Características Maquina Virtual
+* Ram -> 0.5 GB
+* CPU -> 2.5GHz
+
+
 ## Generar Arreglos
 RandomArrayWriter para crear los arreglos con diferentes tamaños y notar cambios en los tiempos de ejecución en cada uno de los lenguajes.
 ```markdown
@@ -172,17 +177,45 @@ int main(int argc, char** argv) {
     return 0;
 }
 ```
+### Run in the Virtual Machine
+Se codificó en el cmd de la maquina virtual la ejecución de cada uno de los algoritmos en los diferentes lenguajes, de modo que se puede generar un archivo de resultados con los tiempo de ejecución en milisegundos.
+## Execution in CMD
+```markdown
+#!/bin/bash
+if [ ! -f "counter.dat" ]; then
+    COUNTER=0
+    SIZE=0
+    mkdir logs
+else
+    COUNTER=`cat counter.dat`
+    SIZE=`cat size.dat`
+    rm logs/*
+    rm *.class
+    rm a.out
+fi
+
+let COUNTER=COUNTER+1
+echo "${COUNTER}" > counter.dat
+let SIZE=SIZE+500
+echo "${SIZE}" > size.dat
+printf "# Test %d\n\n" $COUNTER >> results.md
+MIN="-1000000"
+MAX="1000001"
+printf "Size of array: %d\n\nLower bound (inclusive): %d\n\nUpper bound (exclusive): %d\n\n" $SIZE $MIN $MAX >> results.md
+echo "Language | Time in ms" >> results.md
+echo "-------- | ----------" >> results.md
+javac *.java
+java RandomArrayWriter $SIZE $MIN $MAX
+g++ InsertionSort.cpp
+./a.out
+java InsertionSort
+python3 InsertionSort.py
+```
+## Resultados
+<p align="center">
+    <img src="Tiempo.png">
+</p>
 
 
-![Tiempo de ejecución de ordenar diferentes arreglos.]("Tiempo.png")
+### Discusión
 
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/AndresQuimbita/ProyectoOrganizacion/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
