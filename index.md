@@ -217,5 +217,4 @@ python3 InsertionSort.py
 </p>
 
 [Resultados de la ejecución de los algoritmos:](results.md)
-### Discusión
 
