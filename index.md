@@ -2,6 +2,7 @@
 El proyecto se centra en comparar los tiempos que le toman a diferentes lenguages de programación, tanto de alto como de bajo nivel, para ordenar algunos arreglos de diferentes tamaños usando el algoritmo del insertion sort.
 
 ### Experimentación
+En esta se presentan los diferentes códigos ejecutados para el análisis de los datos de tiempo de ejecución.
 ## Generar Arreglos
 RandomArrayWriter para crear los arreglos con diferentes tamaños y notar cambios en los tiempos de ejecución en cada uno de los lenguajes.
 ```markdown
@@ -118,6 +119,7 @@ if __name__ == "__main__":
     with open("results.md", "a") as f:
         f.write(f"Python   | {str(round(t))}\n\n")
 ```
+## CPP (C++)
 ```markdown
 #include <iostream>
 #include <fstream>
@@ -172,21 +174,7 @@ int main(int argc, char** argv) {
 ```
 
 ```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+![Image]("Tiempo.png")
 ```
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
