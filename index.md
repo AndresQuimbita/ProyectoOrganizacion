@@ -172,15 +172,45 @@ int main(int argc, char** argv) {
     return 0;
 }
 ```
+### Run in the Virtual Machine
+Se codificó en el cmd de la maquina virtual la ejecución de cada uno de los algoritmos en los diferentes lenguajes, de modo que se puede generar un archivo de resultados con los tiempo de ejecución en milisegundos.
+## Execution in CMD
+```markdown
+#!/bin/bash
+if [ ! -f "counter.dat" ]; then
+    COUNTER=0
+    SIZE=0
+    mkdir logs
+else
+    COUNTER=`cat counter.dat`
+    SIZE=`cat size.dat`
+    rm logs/*
+    rm *.class
+    rm a.out
+fi
 
+let COUNTER=COUNTER+1
+echo "${COUNTER}" > counter.dat
+let SIZE=SIZE+500
+echo "${SIZE}" > size.dat
+printf "# Test %d\n\n" $COUNTER >> results.md
+MIN="-1000000"
+MAX="1000001"
+printf "Size of array: %d\n\nLower bound (inclusive): %d\n\nUpper bound (exclusive): %d\n\n" $SIZE $MIN $MAX >> results.md
+echo "Language | Time in ms" >> results.md
+echo "-------- | ----------" >> results.md
+javac *.java
+java RandomArrayWriter $SIZE $MIN $MAX
+g++ InsertionSort.cpp
+./a.out
+java InsertionSort
+python3 InsertionSort.py
+```
+## Resultados
 <p align="center">
     <img src="Tiempo.png">
-   ![Tiempo de ejecución de ordenar diferentes arreglos.](Tiempo.png)****
 </p>
 
-
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
 ### Jekyll Themes
 
