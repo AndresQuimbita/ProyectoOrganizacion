@@ -217,20 +217,24 @@ python3 InsertionSort.py
     <img src="Tiempo.png">
 </p>
 
-[Resultados de la ejecución de los algoritmos 1:](results.md)
+[Resultados de la ejecución de los algoritmos 1.](results.md)
 
 ### Runtime 2
 <p align="center">
     <img src="Tiempo2.png">
 </p>
 
-[Resultados de la ejecución de los algoritmos 2:](https://github.com/adricamilo/cmp-3004-final/blob/main/graph_test/data_ec2_2/full_test_results1.csv)
+[Resultados de la ejecución de los algoritmos 2.](https://github.com/adricamilo/cmp-3004-final/tree/main/graph_test/data_ec2_2)
 
 ### Runtime 3
 <p align="center">
     <img src="Tiempo3.png">
 </p>
 
-[Resultados de la ejecución de los algoritmos 3:](https://github.com/adricamilo/cmp-3004-final/tree/main/graph_test/data_ec2_1)
+[Resultados de la ejecución de los algoritmos 3.](https://github.com/adricamilo/cmp-3004-final/tree/main/graph_test/data_ec2_1)
+
+## ENLACE PROYECTO
+[Proyecto Organización  de Computadores Repositorio](https://github.com/adricamilo/cmp-3004-final)
+[Readme.md Proyecto Organización  de Computadores Repositorio](https://github.com/adricamilo/cmp-3004-final/blob/main/README.md)
 
 
