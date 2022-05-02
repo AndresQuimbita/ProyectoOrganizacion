@@ -211,10 +211,26 @@ g++ InsertionSort.cpp
 java InsertionSort
 python3 InsertionSort.py
 ```
-## Resultados
+## Resultados 
+### Runtime 1
 <p align="center">
     <img src="Tiempo.png">
 </p>
 
-[Resultados de la ejecución de los algoritmos:](results.md)
+[Resultados de la ejecución de los algoritmos 1:](results.md)
+
+### Runtime 2
+<p align="center">
+    <img src="Tiempo2.png">
+</p>
+
+[Resultados de la ejecución de los algoritmos 2:](https://github.com/adricamilo/cmp-3004-final/blob/main/graph_test/data_ec2_2/full_test_results1.csv)
+
+### Runtime 3
+<p align="center">
+    <img src="Tiempo3.png">
+</p>
+
+[Resultados de la ejecución de los algoritmos 3:](https://github.com/adricamilo/cmp-3004-final/tree/main/graph_test/data_ec2_1)
+
 
