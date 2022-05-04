@@ -274,5 +274,12 @@ done
 [Proyecto Organización  de Computadores Repositorio](https://github.com/adricamilo/cmp-3004-final)
 
 [Readme.md Proyecto Organización  de Computadores Repositorio](https://github.com/adricamilo/cmp-3004-final/blob/main/README.md)
+## ENLACE PROYECTO
+
+Autores: 
+
+Paul Quimbtia 00212513
+
+Adrián Vásconez 00208899
 
 
