@@ -211,10 +211,75 @@ g++ InsertionSort.cpp
 java InsertionSort
 python3 InsertionSort.py
 ```
-## Resultados
+### Gráficos
+Para los graficos con más datos promediados que usamos para las gráficas en escala logarítmica usamos el siguiente código, que se encuentra en el directorio graph_test:
+## Data execution
+```markdown
+#!/bin/bash
+rm -f -R data
+mkdir data
+for j in {1..10}; do
+    echo Running full test \#$j...
+	./full_test
+	filename="./data/full_test_results$j.csv"
+	cp full_test_results.csv $filename
+done
+```
+## Echo to the data
+```markdown
+#!/bin/bash
+SIZE=250
+MIN="-1000000"
+MAX="1000001"
+./reset_test
+echo "array_size,c++_time,java_time,python_time" > full_test_results.csv
+mkdir logs
+javac *.java
+g++ -o InsertionSort.out InsertionSort.cpp
+for i in {1..60}; do
+    echo Sorting array of $SIZE entries...
+    rm -f logs/*
+    printf "%d," $SIZE >> full_test_results.csv
+    java RandomArrayWriter $SIZE $MIN $MAX
+    let SIZE=SIZE+250
+    ./InsertionSort.out
+    java InsertionSort
+    python3 InsertionSort.py
+    echo $i/60 done.
+done
+```
+## Resultados 
+### Runtime 1
 <p align="center">
     <img src="Tiempo.png">
 </p>
 
-[Resultados de la ejecución de los algoritmos:](results.md)
+[Resultados de la ejecución de los algoritmos 1.](results.md)
+
+### Runtime 2
+<p align="center">
+    <img src="Tiempo3.png">
+</p>
+
+[Resultados de la ejecución de los algoritmos 2.](https://github.com/adricamilo/cmp-3004-final/tree/main/graph_test/data_ec2_2)
+
+### Runtime 3
+<p align="center">
+    <img src="Tiempo2.png">
+</p>
+
+[Resultados de la ejecución de los algoritmos 3.](https://github.com/adricamilo/cmp-3004-final/tree/main/graph_test/data_ec2_1)
+
+## ENLACE PROYECTO
+[Proyecto Organización  de Computadores Repositorio](https://github.com/adricamilo/cmp-3004-final)
+
+[Readme.md Proyecto Organización  de Computadores Repositorio](https://github.com/adricamilo/cmp-3004-final/blob/main/README.md)
+## ENLACE PROYECTO
+
+Autores: 
+
+Paul Quimbtia 00212513
+
+Adrián Vásconez 00208899
+
 
