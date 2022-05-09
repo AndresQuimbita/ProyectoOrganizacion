@@ -292,7 +292,7 @@ Al obtener los datos, nos dimos cuenta de que no se apreciaban bien debido a que
 ### Runtime 2
 
 <p align="center">
-    <img src="Tiempo3.png">
+    <img src="Tiempo2.png">
 </p>
 
 [Resultados de la ejecución de los algoritmos 2.](https://github.com/adricamilo/cmp-3004-final/tree/main/graph_test/data_ec2_2)
@@ -302,7 +302,7 @@ Al obtener los datos, nos dimos cuenta de que no se apreciaban bien debido a que
 ### Runtime 3
 
 <p align="center">
-    <img src="Tiempo2.png">
+    <img src="Tiempo3.png">
 </p>
 
 [Resultados de la ejecución de los algoritmos 3.](https://github.com/adricamilo/cmp-3004-final/tree/main/graph_test/data_ec2_1)
