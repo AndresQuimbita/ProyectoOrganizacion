@@ -236,8 +236,6 @@ python3 InsertionSort.py
 
 De esta forma, se obtuvieron [datos](https://andresquimbita.github.io/ProyectoOrganizacion/results.html) en el formato de tabla.
 
-_En el link de arriba, cámbiale el título para que diga: "Resultados en Tablas" en lugar de "ProyectoOrganizacion"_
-
 Además, se decidió realizar un gráfico comparativo de los resultados. Para este efecto, decidimos realizar varios tests con los mismos valores para poder sacar un promedio y obtener un mejor gráfico. Se realizaron 10 tests con diferentes arreglos aleatorios para cada tamaño de arreglo.
 
 Se utilizaron los siguientes scripts de bash para obtener los datos.
@@ -287,7 +285,6 @@ Al obtener los datos, nos dimos cuenta de que no se apreciaban bien debido a que
 
 [Resultados de la ejecución de los algoritmos 1.](results.md)
 
-**runtime 2 con etiquetas de los ejes y con diferente título. Eje y: "Tiempo [ms]". Eje x: "Tamaño del arreglo".**
 
 ### Runtime 2
 
@@ -297,7 +294,6 @@ Al obtener los datos, nos dimos cuenta de que no se apreciaban bien debido a que
 
 [Resultados de la ejecución de los algoritmos 2.](https://github.com/adricamilo/cmp-3004-final/tree/main/graph_test/data_ec2_2)
 
-**runtime 3 con etiquetas de los ejes y con diferente título. Eje y: "Tiempo [ms]". Eje x: "Tamaño del arreglo".**
 
 ### Runtime 3
 
