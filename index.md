@@ -16,7 +16,7 @@ Se utilizó una máquina virtual de AWS para realizar las comparaciones con las 
 
 - Sistema operativo: Ubuntu 20.04 LTS
 - Procesador: Intel(R) Xeon(R) CPU E5-2670 v2 @ 2.50GHz
-- # de CPUs: 1
+- Número de CPUs: 1
 - Memoria: 0.5 GB
 
 Para los tests, se generaron arreglos de números aleatorios en Java:
